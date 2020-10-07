@@ -3,12 +3,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-void signalHandler(int signum){
-    printf("no me puedes matar");
-}
-
 int main(int argc, char **argv){
-    signal(17, signalHandler);
     int x = fork();
     if(x == 0){
         printf("soy el hijo\n");
